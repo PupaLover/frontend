@@ -13,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <h1>Привет! Уходи💅🥐</h1>
+      <button onClick={onToggleButton}>toggle</button>
     </div>
   );
 }
