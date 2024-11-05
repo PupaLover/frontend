@@ -10,10 +10,16 @@ function App() {
     tg.ready();
   }, [])
 
+  const onClose = () => {
+    tg.close()
+  }
+
   return (
     <div className="App">
       <h1>Привет! Уходи💅🥐</h1>
+      <button onClick={onClose}>Zaкрыть</button>
       <button onClick={onToggleButton}>toggle</button>
+      <span className={'username'}></span>
     </div>
   );
 }
