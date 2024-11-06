@@ -24,9 +24,10 @@ const ProductList = () => {
     }
 
     useEffect(() => {
-        tg.onEvent('mainButtonClicked', tests)
+        tg.onEvent('mainButtonClicked', onSendData)
+        console.log("нажали")
         return() => {
-            tg.offEvent('mainButtonClicked', tests)
+            tg.offEvent('mainButtonClicked', onSendData)
         }
     },[])
 
