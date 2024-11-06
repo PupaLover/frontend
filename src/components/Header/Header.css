@@ -3,9 +3,31 @@
     height: 50px;
     display: flex;
     align-items: center;
-    padding: 0 20px;
+    padding: 0;
+}
+
+.hdrText{
+    position: absolute;
+
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin: 0;
+    color: var(--tg-theme-text-color);
+    background-color:var(--tg-theme-header-bg-color);
 }
 
 .username {
+    background-color: var(--tg-theme-button-color);
+    color: var(--tg-theme-button-text-color);
+
+    padding: 10px;
+    border-radius: 15px;
+
+    z-index: 2;
+    position: absolute;
     margin-left: auto;
+    right: 1%;
+    top: 1%;
+    font-size: calc(200% - 10px);
 }

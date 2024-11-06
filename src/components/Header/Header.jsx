@@ -12,9 +12,9 @@ const Header = () => {
 
     return (
         <div className={'header'}>
-            <h1>Привет! Уходи💅🥐</h1>
+            <h1 className="hdrText">Привет! Уходи💅🥐</h1>
 
-            <span className={'username'}>
+            <span className={'username'}>Zabad
                 {tg.initDataUnsafe?.user?.username}
             </span>
         </div>
