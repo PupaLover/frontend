@@ -19,10 +19,6 @@ const ProductList = () => {
         tg.sendData(JSON.stringify(data));
     }, [])
 
-    function tests() {
-        alert(Test)
-    }
-
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
         console.log("нажали")
@@ -37,7 +33,7 @@ const ProductList = () => {
         tg.MainButton.setParams({
             text: 'Отдать все свои данные'
         })
-    },[country, phone])
+    },[country, phone, name])
 
 
     useEffect(() => {
