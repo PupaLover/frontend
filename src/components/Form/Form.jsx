@@ -1,17 +1,83 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import './Form.css';
+import { useTelegram } from "../../hooks/useTelegram";
 
 const ProductList = () => {
+
+    const [name, setName] = useState('')
+    const [country, setCountry] = useState('')
+    const [phone, setPhone] = useState('phone')
+    const {tg} = useTelegram();
+
+    useEffect(() => {
+        tg.MainButton.setParams({
+            text: 'Отдать все свои данные'
+        })
+    },[country, phone])
+
+    useEffect(() => {
+        if(!country || !phone || !name){
+            tg.MainButton.hide();
+        }else{
+            tg.MainButton.show();
+        }
+
+    },[country,phone])
+
+
+
+    const onChangeName = (e) => {
+        setName(e.target.value)
+    }
+    const onChangeCountry = (e) => {
+        setCountry(e.target.value)
+    }
+    const onChangePhone = (e) => {
+        setPhone(e.target.value)
+    }
+
+
     return(
         <div className={"form"}>
             <h3>Введите ваши данные</h3>
 
-            <input className={"input"} placeholder="Ваше имя" type="text"/>
-            <input className={"input"} placeholder="Страна" type="text"/>
-            <input className={"input"} placeholder="Номер телефона" type="text"/>
+            <input
+                className={"input"} 
+                placeholder="Ваше имя" 
+                type="text"
+                value={name}
+                onChange={onChangeName}
+                />
+
+            <input 
+                className={"input"} 
+                placeholder="Страна" 
+                type="text"
+                value={country}
+                onChange={onChangeCountry}
+                />
+
+            <input 
+                className={"input"} 
+                placeholder="Номер телефона" 
+                type="text"
+                value={phone}
+                onChange={onChangePhone}
+                />
+
+
 
         </div>
     )
 };
+
+
+
+
+
+
+
+
+
 
 export default ProductList
