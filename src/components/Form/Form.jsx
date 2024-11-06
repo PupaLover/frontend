@@ -15,14 +15,18 @@ const ProductList = () => {
             country,
             phone
         }
+        console.log(data)
         tg.sendData(JSON.stringify(data));
     }, [])
 
+    function tests() {
+        alert(Test)
+    }
+
     useEffect(() => {
-        tg.onEvent('mainButtonClicked', onSendData)
-        console.log(data)
+        tg.onEvent('mainButtonClicked', tests)
         return() => {
-            tg.offEvent('mainButtonClicked', onSendData)
+            tg.offEvent('mainButtonClicked', tests)
         }
     },[])
 
