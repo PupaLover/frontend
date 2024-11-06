@@ -12,17 +12,15 @@ body {
 .closeBtn{
   padding: 5px 10px;
 
-  border: 1;
+  border: 20px;
   border-radius: 15px;
   background-color: var(--tg-theme-button-color);
 
 
   position: absolute;
   bottom: 20px;
-  left:35%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  left:36%;
+
   transform: translate(-50% -50%);
   width: 10%;
   min-height: 50px;
