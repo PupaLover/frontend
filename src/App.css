@@ -12,7 +12,7 @@ body {
 .closeBtn{
   padding: 5px 10px;
 
-  border: 20px;
+  border: none;
   border-radius: 15px;
   background-color: var(--tg-theme-button-color);
 
