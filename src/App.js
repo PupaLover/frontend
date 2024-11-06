@@ -10,7 +10,7 @@ import Form from './components/Form/Form';
 
 function App() {
 
-  const {onToggleButton, tg} = useTelegram();
+  const {onClose,onToggleButton, tg} = useTelegram();
 
   useEffect(() => {
     tg.ready();
@@ -25,7 +25,8 @@ function App() {
         <Route path={'form'} element={<Form />}/ >
       </Routes>
 
-      <button onClick={onToggleButton}>toggle</button>
+      <button class='Toggle' onClick={onToggleButton}>toggle</button>
+      <button className='closeBtn' onClick={onClose}>Zaкрыть</button>
     </div>
   );
 }
