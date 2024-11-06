@@ -14,7 +14,7 @@ const Header = () => {
         <div className={'header'}>
             <h1 className="hdrText">Привет! Уходи💅🥐</h1>
 
-            <span className={'username'}>
+            <span className={'username'}>Zabadooj
                 {tg.initDataUnsafe?.user?.username}
             </span>
         </div>
