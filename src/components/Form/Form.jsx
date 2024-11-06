@@ -20,6 +20,7 @@ const ProductList = () => {
 
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData)
+        console.log(data)
         return() => {
             tg.offEvent('mainButtonClicked', onSendData)
         }
@@ -32,6 +33,7 @@ const ProductList = () => {
             text: 'Отдать все свои данные'
         })
     },[country, phone])
+
 
     useEffect(() => {
         if(!country || !phone || !name){
