@@ -1,0 +1,13 @@
+.input{
+    margin: 10px;
+    width: 50%;
+    height: 60px;
+    border-radius: 9px;
+
+    position:relative;
+    top: 0%;
+    left: 25%;
+    transform: translate(-50% -50%);
+
+    font-size: 20px;
+}
